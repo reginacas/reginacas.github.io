@@ -2,7 +2,7 @@ import type { Metadata, Site, Socials } from "@types";
 
 export const SITE: Site = {
   TITLE: "Regina Castro",
-  DESCRIPTION: "Astro Micro is an accessible and lightweight blog.",
+  DESCRIPTION: "Technical UX designer building delightful, accessible, and high-performance experiences.",
   EMAIL: "reginacas97@gmail.com",
   NUM_POSTS_ON_HOMEPAGE: 5,
   NUM_PROJECTS_ON_HOMEPAGE: 3,
@@ -10,7 +10,7 @@ export const SITE: Site = {
 
 export const HOME: Metadata = {
   TITLE: "Regina Castro",
-  DESCRIPTION: "Regina Castro is a Design Engineer and master's student in Human-Computer Interaction at the University of Siegen.",
+  DESCRIPTION: "Regina Castro is a Technical UX Designer and master's student in Human-Computer Interaction at the University of Siegen.",
 };
 
 export const BLOG: Metadata = {

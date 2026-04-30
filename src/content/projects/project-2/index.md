@@ -3,7 +3,7 @@ title: "Smart Workflows — Simplifying complex component creation"
 description: "An interactive, engaging UI component for explaining scientific application workflows and an internal tool to build it."
 date: "2026-04-29"
 image: "/workflows-cover.png"
-tags: ["UX", "UI Development", "UX Research", "Internal Tools"]
+tags: ["No-Code Tools", "UI Development", "UX Research", "Internal Tools"]
 demoURL: ""
 repoURL: ""
 ---
@@ -21,14 +21,11 @@ repoURL: ""
 ## 🔍 Background
 
 At Beckman Coulter Life Sciences, scientific workflow diagrams are one of the key elements of our resource pages. They help point customers towards instruments from our portfolio that best match their laboratory needs for certain processes. However, the previous method for building and displaying these workflows was ineffective and technologically stagnant. 
-<br>
 Digital experience managers (DXMs) had to either:
 
 - **Ask the design department for an image file** for the whole workflow, which resulted in a static, non-interactive experience and inaccessible experience, not optimized for search engines.
 
 - **Or build the workflow using code**, which was a tedious, manual process that required technical expertise and resulted in inconsistent designs and broken experiences on mobile devices.
-
-These not only affected our website's user experience but was also ineffective and time-consuming for the DXMs. 
 
 <img src="/wf-problem.png" alt="Workflow showing the tedious process of building a workflow from scratch"/>
 <p class="text-center text-sm italic">An illustration of the process done previously by DXMs, which involved a lot of copy-pasting and manual adjustments.</p>
@@ -107,7 +104,7 @@ You can see one of the new workflow components in action <a href="https://www.be
 
 ### ⚠️ What went wrong
 
-After I developed the final workflow, my colleagues in the Digital Experience team were initially happy with the design and functionality and excited to use it.
+After I developed the final workflow, my colleagues in the Digital Experience team were happy with the design and functionality and initially very excited to use it.
 <br>
 <br>
 However, nobody was actually using my template. Even though the code was written cleanly and in a modular way, it was still a code-based solution, which meant that DXMs would have to copy-paste it and modify the content directly on the code, like with the previous components. This was not sustainable and required technical knowledge, which not all DXMs are supposed to have.
@@ -115,7 +112,7 @@ However, nobody was actually using my template. Even though the code was written
 
 ### 💡 The lightbulb moment
 
-To fix this issue, I developed an internal tool. I was initially unsure how to approach it, since I had never built a tool for generating UI before, but it turned out to be a natural extension of the modular workflow system I had already designed.
+To fix this issue, I decided to develop an internal tool. I was initially unsure how to approach it, since I had never built a tool for generating UI before, but it turned out to be a natural extension of the modular workflow system I had already designed.
 <br>
 <br>
 I just needed to create a user interface where users could input the content of the workflow (steps, sub-steps, associated products) and integrate it in the code for the workflow component I previously created.
@@ -132,9 +129,9 @@ The "Workflow Editor", as I creatively named it, is a no-code GUI that allows DX
 The Workflow Editor is a simple, form-based interface where users enter steps, sub-steps, product links, and images. It outputs a single JSON file containing the workflow content, which colleagues can import into another Workflow Editor to recreate the same component—ensuring consistency and smoother collaboration.
 
 <img src="/wf-editor.png" alt="Workflow Editor interface" class="project-img" />
-<p class="text-center text-sm italic">Workflow Editor interface</p>
+<p class="text-center text-sm italic">The vibe-coded Workflow Editor</p>
 
-Once the user finishes, the generated JSON can be fed to the workflow script to render the content dynamically. The resulting code can be then pasted into the company's Sitecore CMS to add to the structure of the intended webpage.
+Once the user finishes, the generated JSON can be fed into the script of the workflow component I previously created, and it will render the new content dynamically. The resulting code can be then pasted into the company's Sitecore CMS to add to the structure of the intended webpage.
 This makes publishing faster and easier for DXMs and non-technical colleagues, while ensuring consistent design and behaviour across workflows without sacrificing flexibility.<br>
 
 
@@ -142,17 +139,17 @@ This makes publishing faster and easier for DXMs and non-technical colleagues, w
 
 Since the implementation of the new workflow component and the Workflow Editor, the project has delivered immediate improvements to our internal development lifecycle and the site’s technical health:
 
-### ⏱️ 1. Reduction in Time-to-Market
+### ⏱️ Reduction in Time-to-Market
 By shifting from manual crafting to the Workflow Editor, the time required to deploy a new scientific workflow was reduced from several hours to **under 15 minutes.** This allows the Digital Experience team to ship content at scale without relying on frontend engineering support.
 
-### 🧹 2. Tech-debt reduction
-The modular architecture replaced a fragmented "copy-paste" culture. By centralizing the logic into a single JSON-fed component, we eliminated redundant CSS/JS across the site, ensuring that future global design updates can be pushed through a single source of truth rather than hundreds of manual files.
+### 🧹 Tech-debt reduction
+The new system eliminates the need for copy-pasting code snippets and manual adjustments, which were common sources of errors and inconsistencies. 
 
-### ♿ 3. Guaranteed accessibility & SEO compliance
+### ♿ Guaranteed accessibility & SEO compliance
 
 Before this project, 100% of image-based workflows were invisible to screen readers and search engines. The new system ensures that every workflow shipped is automatically accessible and fully indexable (SEO-friendly) through semantic HTML, regardless of the DXM’s technical background.
 
-### 🎯 4. Visual & functional standardization
+### 🎯 Visual & functional standardization
 
 The component framework enforces brand consistency across all workflow diagrams, making sure users have a cohesive experience and can easily recognize and understand the patterns. This reinforces Beckman Coulter’s professional reputation through high-fidelity UI that doesn’t break when our users interact with it.
 
@@ -162,7 +159,7 @@ The component framework enforces brand consistency across all workflow diagrams,
 
 The project is currently transitioning to the Global Web Team for full integration into the Sitecore CMS. Because the Workflow Editor already outputs structured JSON that maps directly to the UI component’s properties, the technical handoff is remarkably efficient. I have essentially provided the logic and schema, allowing the Sitecore team to wrap the tool into a native CMS component with less effort.
 
-## 📊 Performance tracking & analytics
+### 📊 Performance tracking & analytics
 
 With the standardized component now live, the next phase involves monitoring engagement through Google Tag Manager (GTM). We will specifically track:
 
@@ -173,7 +170,7 @@ With the standardized component now live, the next phase involves monitoring eng
 
 ## 💭 My takeaway
 
-This project was a great learning experience for me, as it allowed me to take ownership of a project from start to finish, and to see the direct impact of my work on the internal processes of my team. By leveraging AI coding tools, I managed to quickly pivot and build an internal solution that ensured the success of the main project, which is something I'm definitely looking forward to doing more in the future. 
+This project served as a case study in full-cycle ownership, specifically highlighting the need to pivot when technical friction threatens success. By leveraging AI coding tools, I managed to quickly build an internal solution that ensured the success of the main project, which is something I'm definitely looking forward to doing more in the future. 
 <br>
 <br>
 It also solidified my desire to build developer-centric tools and systems that reduce complexity and empower builders to ship high-quality work.

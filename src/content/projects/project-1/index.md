@@ -24,14 +24,14 @@ While I was investigating the accessibility barriers that <i>blind and low-visio
 3. Getting feedback on their design decisions
 
 In the past, they had to heavily rely on sighted colleagues, friends, family or crowd-sourcing services like BeMyEyes, which created delays and workflow interruptions. While AI has emerged as a powerful solution to this problem, current general-purpose and coding tools (ChatGPT, Copilot) are often inaccessible, provide overly vague feedback, and require repetitive, labor-intensive prompting.
-Additioanlly, developers are forced to manually share screenshots and code contexts, a process that disrupts their workflow and efficency.
+Additionally, developers are forced to manually share screenshots and code contexts, a process that disrupts their workflow and efficency.
 
 
 ## 💡 Proposed solution
 
 <img src="/senseui-welcome.png" alt="SenseUI's welcome page opened in a browser" class="project-img" />
 
-This is what sparked the idea to create <i>the first web design focused AI tool for blind and low vision developers</i>: SenseUI, an open-source, AI-powered design tool co-designed with blind and low-vision developers. By embedding accessibility and design context directly into the tool's architecture, SenseUI eliminates the need for sighted colleagues intervention, enabling developers to work independently, advance their careers, and participate fully in the frontend ecosystem. SenseUI is completely free to use and open to improvement suggestions and feature ideas.
+This is what sparked the idea to create <i>the first web design focused AI tool for blind and low vision developers</i>: SenseUI, an open-source, AI-powered design tool co-designed with blind and low-vision developers. By embedding accessibility and design context directly into the tool's architecture, SenseUI eliminates the need for sighted colleagues intervention, enabling developers to work independently, advance their careers, and participate in front-end development more independently and confidently. SenseUI is completely free to use and open to improvement suggestions and feature ideas.
 
 
 ## 🔄 Process
@@ -55,7 +55,10 @@ My process began with interviews and contextual inquiries with blind and low-vis
 
 ### 2. Prototyping for validation
 
-Before writing production code, I designed and developed a prototype using the Wizard-of-Oz method. This method allowed me to simulate AI-driven design feedback in real-time. By testing this prototype with volunteers, I validated the core value proposition and established the essential feature set without committing to a premature technical architecture.
+From the insights gathered, I identified the core value proposition of SenseUI: providing real-time, actionable design feedback without the need for manual context sharing. This could be allowed by making it into a browser extension, since it would allow the tool to automatically access the DOM structure, CSS and visual state of the current page.
+<br>
+<br>
+Before writing production code, I designed and developed a prototype using the Wizard-of-Oz method. This method allowed me to simulate AI-driven design feedback in real-time. By testing this prototype with participants, I validated the core value proposition and established the essential feature set without committing to a premature technical architecture.
 
 <img src="/senseui-wizard.png" alt="Screenshot of the first version of SenseUI for initial validation" class="project-img" />
 <p class="text-center text-sm italic">First version of SenseUI</p>
@@ -74,7 +77,7 @@ After testing out the prototype's interface and the pre-generated responses, all
 
 ### 3. Co-development of SenseUI with the community
 
-Once the concept was validated, I shifted to preparing a co-development approach that would allow blind and low-vision developers to contribute to the project in various ways. This involved:
+I implemented a co-development framework that invites blind and low-vision developers to participate throughout the process, ensuring the technology is built for and by the community. This involved:
 
 - Creating the GitHub repository, establishing the open-source infrastructure for collaboration.
 - Reaching out to developers from the blind and low vision community and inviting them to join in as either testers, contributors or simply observers.
@@ -94,7 +97,7 @@ After 5 completed Sprints, SenseUI v1.0 is now live on the Chrome Web Store!
 
 #### Context-aware automation
 
-Unlike general-purpose AI tools, SenseUI autonomously extracts the DOM structure, CSS, and visual state of the current page. This eliminates the "extra labor" of manual screenshots and prompt engineering, allowing developers to focus on the code rather than the tooling.
+Unlike general-purpose AI tools, SenseUI autonomously extracts the DOM structure, CSS, and visual state of the current page. This eliminates the "extra labor" of manual screenshots and prompt engineering, allowing developers to focus on their goal, not on multitasking.
 
 <img src="/senseui-issues.png" alt="A screenshot showing SenseUI opened on a page, giving feedback about Regina Castro's website" class="project-img" />
 <br />
@@ -106,9 +109,15 @@ Users can now perform independent UI audits on their web projects; they can iden
 
 <img src="/senseui-prompts.png" alt="A screenshot showing SenseUI's available slash commands: /describe, /issues, /type, /color, /spacing, /alignment, /refresh, /clear" class="project-img block mx-auto w-full md:w-2/3" />
 
+#### Screen reader compatible AI feedback
+
+Not only SenseUI's interface is fully compatible with screen readers, but also the AI-generated feedback is carefully structured using semantic markup in a way that is easy to navigate and understand using assistive technologies, making it easier for users to quicly scan the feedback and identify the most important points.
+
+<img src="/senseui-interface.png" alt="A screenshot showing SenseUI opened on a page, giving showing AI feedback that uses headers and lists" class="project-img block mx-auto w-full md:w-2/3" />
+
 #### Project-driven workflows
 
-SenseUI supports project-level state management, allowing developers to align their codebase with project-specific design specifications and goals, bridging the gap between high-level vision and implementation.
+SenseUI supports project-oriented workflows, allowing developers to check if their webpages meets specific project requirements and goals insteag of providing general advice. This is achieved by allowing users to create, save and edit Project profiles from the Profile page, which can be then selected from a dropdown on the chat to switch from project contexts easily.
 
 <img src="/senseui-projects.png" alt="A screenshot showing SenseUI opened on a page, giving feedback about Regina Castro's website" class="project-img" />
 <br />
@@ -122,9 +131,10 @@ SenseUI supports project-level state management, allowing developers to align th
 	</figcaption>
 </figure>
 
-## Takeaway
+## 🫶 Takeaway
 
-This project meant a lot to me, not only because I got to merge my passion for web design, accessibility, and open-source, but also because I got to collaborate with immensely talented developers who shared my enthusiasm for the potential of AI in the field of accessibility and assistive technology. The SenseUI community hopes that this tool shifts how blind and low-vision developers approach web design and inspires similar tools to emerge.
+This project meant a lot to me, not only because I got to merge my passion for web design, accessibility, and open-source, but also because I got to collaborate with immensely talented developers who shared my enthusiasm for the potential of AI in the field of accessibility and assistive technology. 
+I learned so much about creating accessible interfaces, creating AI-assisted worfklows and the importance of community-driven development. The SenseUI community hopes that this tool shifts how blind and low-vision developers approach web design and inspires similar tools to emerge.
 
 I would like to give a shout-out to some of the most engaged people on this project; without them, it could not have turned out as well as it did:
 

@@ -40,7 +40,7 @@ const projects: CollectionEntry<"projects">[] = (
         <div class="order-1 rounded-2xl overflow-hidden flex-shrink-0 shadow-[0_0_38px_10px_rgba(15,23,42,0.12)] dark:shadow-[0_0_42px_12px_rgba(255,255,255,0.12)]" style="width: 180px; height: 180px;">
           <Image
             src={portrait}
-            alt="Profile picture of Regina Castro"
+            alt="Portrait of Regina with a pixelate look and a lime green background"
             class="w-full h-full scale-120 object-cover"
           />
         </div>
@@ -50,15 +50,20 @@ const projects: CollectionEntry<"projects">[] = (
         </h1>
           <section class="mb-4 max-w-xl">
             <p class="text-lg text-black/70 dark:text-white/70 leading-8">
-              A<span
+              A technical minded <span
                 class="text-neutral-50"
                 style="font-family: var(--font-mono); font-weight: 500;"
-                > product designer and UX developer</span
+                >UX designer</span
               > building delightful, accessible, and high-performance experiences.
             </p>
           </section>
           <div class="flex flex-wrap justify-center gap-2 md:justify-start">
-            <button>
+            <a
+              href="/ReginaCastro_PortfolioCV.pdf"
+              download="ReginaCastro_PortfolioCV.pdf"
+              class="inline-flex items-center gap-2 rounded-md border border-black/15 px-3 py-2 text-sm text-black/80 transition-colors duration-300 ease-in-out hover:bg-neutral-800 hover:border-white hover:text-white focus-visible:border-black/30 focus-visible:text-black dark:border-white/20 dark:text-white/80 dark:hover:border-white/40 dark:hover:bg-neutral-800 dark:hover:text-white dark:focus-visible:border-white/40 dark:focus-visible:text-white"
+              style="font-family: var(--font-mono);"
+            >
               <svg
                 aria-hidden="true"
                 width="16"
@@ -88,7 +93,7 @@ const projects: CollectionEntry<"projects">[] = (
                 />
               </svg>
               <span>Download CV</span>
-            </button>
+            </a>
             <button
               id="copy-email-btn"
               type="button"
@@ -130,7 +135,7 @@ const projects: CollectionEntry<"projects">[] = (
           {
             projects.map((project) => (
               <li>
-                <ProjectCard project={project} />
+                <ProjectCard project={project} suppressAlt={true} />
               </li>
             ))
           }
@@ -177,7 +182,7 @@ const projects: CollectionEntry<"projects">[] = (
                 >
                   {SOCIAL.NAME}
                 </Link>
-                {"/"}
+                <span aria-hidden="true">/</span>
               </li>
             ))
           }
