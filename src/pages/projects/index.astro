@@ -19,7 +19,7 @@ const projects = (await getCollection("projects"))
           {
             projects.map((project) => (
               <li>
-                <ProjectCard project={project} />
+                <ProjectCard project={project} suppressAlt={true} />
               </li>
             ))
           }

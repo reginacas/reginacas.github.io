@@ -3,9 +3,10 @@ import type { CollectionEntry } from "astro:content";
 
 type Props = {
   project: CollectionEntry<"projects">;
+  suppressAlt?: boolean;
 };
 
-const { project } = Astro.props as Props;
+const { project, suppressAlt = false } = Astro.props as Props;
 ---
 
 <a
@@ -15,7 +16,7 @@ const { project } = Astro.props as Props;
   <div class="overflow-hidden rounded-lg border border-black/10 dark:border-white/10">
     <img
       src={project.data.image ?? "/astro-sphere.jpg"}
-      alt={`Preview image for ${project.data.title}`}
+      alt={suppressAlt ? '' : `Preview image for ${project.data.title}`}
       class="block h-full w-full object-cover object-right-top transition-transform duration-500 ease-out group-hover:scale-[1.03] group-focus-visible:scale-[1.03]"
       loading="lazy"
     />
